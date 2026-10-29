@@ -11,7 +11,9 @@ Team: SAT (MIT-BLR)   Track(s): Track 2 (eurs-t2)   Reported testing-phase submi
 5. **In-Graph Spatial Speckle Suppressor:** In-graph convolutional average pooling (`AvgPool2d(11, 1, 5)`) subtracts a continuous linear penalty from rare elasmobranch logits where regional support is below 0.04, eliminating 100% of isolated false alarms on reef crevices with zero CPU latency.
 
 ## Training data
-Trained exclusively on the 20 provided EURS training scenes across 5 stratified cross-validation folds. The 6 development scenes were held out strictly for validation and hyperparameter tuning. Zero testing-phase images were used for training, fine-tuning, adaptation, or pseudo-labelling.
+Trained exclusively on the 20 provided EURS training scenes across 5 stratified cross-validation folds. The 6 development scenes were held out strictly for validation, hyperparameter tuning, and discrepancy audits. Zero testing-phase images were used for training, fine-tuning, adaptation, or pseudo-labelling.
+- **Exact Training Scenes (20 scenes):** `fish1`, `fish2`, `fish4`, `fish5`, `fish7`, `fish9`, `fish11`, `fish12`, `fish13`, `fish14`, `fish15`, `fish17`, `fish18`, `fish20`, `fish21`, `ray1`, `seahorse1`, `sharkFish`, `starfish2`, `turtles1`.
+- **Development Scenes (6 scenes, validation only):** `fish3`, `fish6`, `fish10`, `fish19`, `sharRayFish`, `starfish1`.
 - **External Data:** None.
 - **Pretrained Models:** MobileNetV3-Large pre-trained on ImageNet-1k (Apache-2.0 / BSD).
 
